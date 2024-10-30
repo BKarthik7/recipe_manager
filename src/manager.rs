@@ -8,7 +8,7 @@ pub struct RecipeManager {
 
 impl RecipeManager {
     pub fn new() -> Self {
-        RecipeManager {
+        Self {
             recipes: Vec::new(),
             next_id: 1,
         }
@@ -49,7 +49,8 @@ impl RecipeManager {
 
     pub fn save_to_file(&self, filename: &str) -> std::io::Result<()> {
         let json = serde_json::to_string(&self.recipes)?;
-        fs::write(filename, json)
+        fs::write(filename, json)?;
+        Ok(())
     }
 
     pub fn load_from_file(&mut self, filename: &str) -> std::io::Result<()> {
