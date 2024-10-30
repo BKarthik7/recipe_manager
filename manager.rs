@@ -21,12 +21,12 @@ impl RecipeManager {
         id
     }
 
-    pub fn get_recipe(&self, id: u32) -> Option<&Recipe> {
-        self.recipes.iter().find(|r| r.id == id)
-    }
-
     pub fn get_all_recipes(&self) -> &Vec<Recipe> {
         &self.recipes
+    }
+
+    pub fn get_recipe(&self, id: u32) -> Option<&Recipe> {
+        self.recipes.iter().find(|r| r.id == id)
     }
 
     pub fn update_recipe(&mut self, id: u32, name: String, ingredients: Vec<String>, instructions: Vec<String>, servings: u32) -> bool {
