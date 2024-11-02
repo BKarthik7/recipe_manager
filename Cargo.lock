@@ -1935,6 +1935,7 @@ dependencies = [
  "iced",
  "serde",
  "serde_json",
+ "wasm-bindgen",
 ]
 
 [[package]]
