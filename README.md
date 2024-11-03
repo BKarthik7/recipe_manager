@@ -25,9 +25,9 @@ A Recipe Manager application built in Rust using the `iced` framework, allowing 
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone {repository-url}.git
    cd recipe_manager
-
+- **Note**: Fork this repository and replace `{repository-url}` with your own URL.
 2. Build and run the application:
 
     ```bash
